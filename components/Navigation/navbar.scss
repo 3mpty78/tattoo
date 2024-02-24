@@ -1,0 +1,12 @@
+@import "@/app/globals";
+
+nav {
+    position: fixed;
+    top: $s;
+    width: 100%;
+
+    ul {
+        @include rowCenter();
+        gap: $s;
+    }
+}

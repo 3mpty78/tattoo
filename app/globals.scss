@@ -1,0 +1,83 @@
+// COLORS
+$black: #121212;
+$white: #e9ecef;
+$accent: #c40000;
+
+// SIZES
+$xs: 10px;
+$s: 30px;
+$m: 60px;
+$l: 120px;
+$xl: 240px;
+
+// FONTS
+@font-face {
+    font-family: geist;
+    src: url(/fonts/GEIST-BOLD.OTF) url(/fonts/GEIST-REGULAR.OTF)
+        url(/fonts/GEIST-THIN.OTF);
+}
+@font-face {
+    font-family: giom;
+    src: url(/fonts/GIOMMODREGULAR.TTF);
+}
+
+// MIXINS
+@mixin fullSize {
+    width: 100%;
+    height: 100%;
+}
+@mixin image {
+    @include fullSize();
+    object-fit: cover;
+}
+@mixin rowCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin colCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// RESET
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: geist;
+    background: $white;
+    color: $black;
+    padding: 0 $xs;
+}
+li {
+    list-style-type: none;
+}
+a {
+    font-weight: normal;
+    color: inherit;
+    text-decoration: none;
+}
+
+// HOMEPAGE
+#homepage {
+    min-height: 100vh;
+    @include colCenter();
+    gap: $m;
+
+    h1 {
+        font-family: giom;
+        text-transform: uppercase;
+        font-size: calc($xs + $m);
+        text-align: center;
+    }
+
+    img {
+        @include image();
+        aspect-ratio: 1/1;
+    }
+}
