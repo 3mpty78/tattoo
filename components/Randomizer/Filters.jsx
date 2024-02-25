@@ -1,7 +1,7 @@
 import React from "react";
 import Selector from "./Selector";
-import Image from "next/image";
 import "./randomizer.scss";
+import DisplayImage from "./DisplayImage";
 
 import random_image from "@/public/img/bannerImage.webp";
 
@@ -15,15 +15,10 @@ export default function Filters() {
             <Selector title={"Choisi ton style"} options={styles} />
             <Selector title={"Choisi ta région"} options={localisations} />
             <button>PLAY</button>
-            <Image
-                src={random_image}
-                alt=""
-                style={{
-                    width: "100%",
-                    height: "100%",
-                    aspectRatio: "1/1",
-                    objectFit: "cover",
-                }}
+            <DisplayImage
+                imageUrl={random_image}
+                artiste={"Artiste"}
+                instagram={"coucou_zebi"}
             />
         </section>
     );

@@ -2,8 +2,11 @@
 
 nav {
     position: fixed;
-    top: $s;
+    top: 0;
+    left: 0;
     width: 100%;
+    padding: $s 0;
+    background: $white;
 
     ul {
         @include rowCenter();

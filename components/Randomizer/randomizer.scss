@@ -55,4 +55,12 @@
             background: #861111;
         }
     }
+
+    .displayImage {
+        .text {
+            width: 100%;
+            @include rowCenter();
+            justify-content: space-between;
+        }
+    }
 }
